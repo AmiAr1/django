@@ -17,3 +17,7 @@ def client_list(request):
     context['clients_list'] = clients_list
     html_page = render(request, 'name.html', context)
     return html_page
+
+
+
+

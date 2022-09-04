@@ -2,7 +2,8 @@
 {% block page %}
     {% for client in clients_list %}
         <div>{{ client.name }}</div>
+        <hr>
     {% endfor %}
-    <hr>
+
     <button type="button" class="btn btn-dark">Dark</button>
 {% endblock %}

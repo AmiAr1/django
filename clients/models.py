@@ -1,6 +1,7 @@
 from django.db import models
 from core.models import Order
 
+
 # name, address, active, bottles_ordered
 
 
@@ -9,6 +10,7 @@ class Client(models.Model):
     address = models.CharField(max_length=255)
     active = models.BooleanField(default=False)
     bottles_ordered = models.IntegerField(default=20)
+
 
 
 class BottlesCount(models.Model):

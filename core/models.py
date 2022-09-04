@@ -16,7 +16,6 @@ class Client(models.Model):
     photo = models.ImageField(
         verbose_name="фото",
         upload_to='photos',
-        null=True,
         blank=True
         )
 

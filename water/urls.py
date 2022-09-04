@@ -19,14 +19,28 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from clients.views import contacts, about, client_list
-from core.views import info_list
+from core.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contacts/', contacts),
-    path('about/', about),
-    path('client/', client_list),
-    path('info/', info_list)
+    path('', about),
+    path('clients/', client_list),
+    path('orders/', order_list, name='order-list'),
+    path('order/<int:id>/', order_info, name='order-info'),
+    path('info/', info_list, name='info-list'),
+    path('client/<int:id>/', client_detail, name='client-detail'),
+    path('client/update/<int:id>/', client_update, name='client-update'),
+    path('client/delete/<int:id>/', client_delete, name='clien-delete'),
+    path('order/create/', create_order, name='create-order'),
+    path('order/djangoform/', order_djangoform, name='order-djangoform')
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# git init
+# git add README.md
+# git commit -m "first commit"
+# git branch -M main
+# git remote add origin https://github.com/AmiAr1/hw4-5.git
+# git push -u origin main

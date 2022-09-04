@@ -2,18 +2,15 @@
 {% block page %}<br/>
     {% for info in info_list %}
         <div>
-            Имя: {{ info.name }}<br/>
-            <hr>
-            Адрес: {{ info.address}}<br/>
-            <hr>
-            Кол-во бутылей: {{ info.bottles_ordered}}<br/>
-            <hr>
-            Фотография:
+            <a href="/client/{{ info.id }}">{{ info.name }}</a>
+            {% if info.photo %}
+        <br>
             {% if info.photo %}
                 <br/>
                 <img src="{{ info.photo.url }}">
             {% endif %}
         </div>
+            {% endif %}
 
     {% endfor %}
 {% endblock %}
