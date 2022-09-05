@@ -41,6 +41,6 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # git init
 # git add README.md
 # git commit -m "first commit"
-# git branch -M main
+#
 # git remote add origin https://github.com/AmiAr1/hw4-5.git
 # git push -u origin main
