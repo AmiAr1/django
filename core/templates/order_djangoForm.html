@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
-
 {% block page %}
-
     <form method="POST">
         {% csrf_token %}
-        {{ order_form.as_p }}
-        <button>Оформить заказ</button>
+        {{ form.as_p }}
+        <button>Send</button>
     </form>
-
 {% endblock %}

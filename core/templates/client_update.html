@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
-
 {% block page %}
-
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button>Обновить</button>
+        <button>Update</button>
     </form>
-
 {% endblock %}
-

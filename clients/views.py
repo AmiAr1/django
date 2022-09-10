@@ -1,10 +1,11 @@
 from django.shortcuts import render, HttpResponse
 from .models import Client
-
+from django.views import View
 
 
 def contacts(request):
     return render(request, 'clients/contacts.html')
+
 
 
 def about(request):
@@ -17,6 +18,8 @@ def client_list(request):
     context['clients_list'] = clients_list
     html_page = render(request, 'name.html', context)
     return html_page
+
+
 
 
 
